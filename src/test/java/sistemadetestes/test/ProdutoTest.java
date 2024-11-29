@@ -1,5 +1,6 @@
 package sistemadetestes.test;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -17,6 +18,10 @@ public class ProdutoTest extends BaseTestProdutos{
     @BeforeClass
     public static void prepararTestes() {
         produtoPage = new ProdutoPO(driver);
+    }
+    @Before
+    public void prepararTestesParaCadaFuncao() {
+        driver.navigate().refresh();
     }
     /*
     @Test
